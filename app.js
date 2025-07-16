@@ -282,6 +282,18 @@ const data = {
 let currentSection = 'home';
 let selectedArtworkId = null;
 let pendingBid = null;
+let currentUser = null;
+
+// Google API configuration (replace placeholders with real values)
+const CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
+const API_KEY = 'YOUR_GOOGLE_API_KEY';
+const SHEET_ID = 'YOUR_SHEET_ID';
+const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+const SCOPES = 'https://www.googleapis.com/auth/spreadsheets';
+
+let tokenClient;
+let gapiInited = false;
+let gisInited = false;
 
 /* ==============================
    Utilities
@@ -605,15 +617,22 @@ function closeBidModal() {
 
 function confirmBid() {
   if (!pendingBid) return;
+  if (gapi.client.getToken() === null) {
+    alert('Please sign in to place a bid.');
+    return;
+  }
+
   const art = data.artworks.find((a) => a.id === pendingBid.id);
   if (!art) return;
-  
+
   art.currentBid = pendingBid.amount;
   art.bidHistory.push({
     amount: pendingBid.amount,
-    bidder: 'You',
+    bidder: currentUser || 'You',
     time: new Date().toISOString()
   });
+
+  appendBidToSheet(art, pendingBid.amount);
   
   closeBidModal();
   
@@ -627,6 +646,87 @@ function confirmBid() {
 // Make modal functions globally available
 window.closeBidModal = closeBidModal;
 window.confirmBid = confirmBid;
+window.handleAuthClick = handleAuthClick;
+window.handleSignOutClick = handleSignOutClick;
+window.gapiLoaded = gapiLoaded;
+window.gisLoaded = gisLoaded;
+
+/* ==============================
+   Google Sheets Integration
+============================== */
+function gapiLoaded() {
+  gapi.load('client', initializeGapiClient);
+}
+
+async function initializeGapiClient() {
+  await gapi.client.init({
+    apiKey: API_KEY,
+    discoveryDocs: [DISCOVERY_DOC]
+  });
+  gapiInited = true;
+  maybeEnableAuth();
+}
+
+function gisLoaded() {
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: CLIENT_ID,
+    scope: SCOPES,
+    callback: ''
+  });
+  gisInited = true;
+  maybeEnableAuth();
+}
+
+function maybeEnableAuth() {
+  if (gapiInited && gisInited) {
+    const btn = $('#signin-button');
+    if (btn) btn.style.display = 'inline-block';
+  }
+}
+
+function handleAuthClick() {
+  tokenClient.callback = async (resp) => {
+    if (resp.error !== undefined) {
+      console.error(resp);
+      return;
+    }
+    currentUser = 'Authenticated';
+    $('#signout-button').style.display = 'inline-block';
+    $('#signin-button').style.display = 'none';
+  };
+
+  if (gapi.client.getToken() === null) {
+    tokenClient.requestAccessToken({ prompt: 'consent' });
+  } else {
+    tokenClient.requestAccessToken({ prompt: '' });
+  }
+}
+
+function handleSignOutClick() {
+  const token = gapi.client.getToken();
+  if (token !== null) {
+    google.accounts.oauth2.revoke(token.access_token);
+    gapi.client.setToken('');
+    currentUser = null;
+    $('#signout-button').style.display = 'none';
+    $('#signin-button').style.display = 'inline-block';
+  }
+}
+
+async function appendBidToSheet(art, amount) {
+  if (!gapiInited) return;
+  const values = [[new Date().toISOString(), art.id, art.title, amount]];
+  try {
+    await gapi.client.sheets.spreadsheets.values.append({
+      spreadsheetId: SHEET_ID,
+      range: 'Bids!A:D',
+      valueInputOption: 'USER_ENTERED',
+      resource: { values }
+    });
+  } catch (err) {
+    console.error('Failed to log bid', err);
+  }
+}
 
 /* ==============================
    Countdown Timers
