@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kokomo Art Association - Online Auction</title>
+    <title>Kokomo Artist Alley - Online Art Auction</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,14 +12,14 @@
         <div class="container">
             <div class="nav-content">
                 <div class="nav-brand">
-                    <h1 class="brand-title">Kokomo Art Association</h1>
-                    <span class="brand-subtitle">Online Auction</span>
+                    <h1 class="brand-title">Kokomo Artist Alley</h1>
+                    <span class="brand-subtitle">Online Art Auction</span>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
                     <li><a href="#" class="nav-link" data-section="auctions">Current Auctions</a></li>
                     <li><a href="#" class="nav-link" data-section="how-to-bid">How to Bid</a></li>
-                    <li><a href="#" class="nav-link" data-section="about">About KAA</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">About Artist Alley</a></li>
                     <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
                 </ul>
             </div>
@@ -33,9 +33,9 @@
             <div class="hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1 class="hero-title">Fine Art Auction</h1>
-                        <p class="hero-subtitle">Discover exceptional artwork from talented local artists</p>
-                        <p class="hero-description">Experience the sophistication of a gallery with the excitement of live bidding. Our monthly auction features carefully curated pieces from members of the Kokomo Art Association.</p>
+                        <h1 class="hero-title">Kokomo Artist Alley Online Art Auction</h1>
+                        <p class="hero-subtitle">Discover exceptional artwork currently on display in Artist Alley</p>
+                        <p class="hero-description">Experience the sophistication of a gallery with the excitement of live bidding. Our auction features the talented artists whose work is currently displayed in Artist Alley, running from July 16 through August 28, 2025.</p>
                         <button class="btn btn--primary btn--lg" onclick="showSection('auctions')">Browse Current Auctions</button>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
             <!-- Featured Auctions Preview -->
             <div class="featured-section">
                 <div class="container">
-                    <h2 class="section-title">Featured Auctions</h2>
+                    <h2 class="section-title">Featured Artist Alley Artworks</h2>
                     <div class="featured-grid" id="featured-grid">
                         <!-- Featured artworks will be populated by JavaScript -->
                     </div>
@@ -56,7 +56,7 @@
         <section id="auctions" class="section">
             <div class="container">
                 <div class="auctions-header">
-                    <h2 class="section-title">Current Auctions</h2>
+                    <h2 class="section-title">Current Artist Alley Auctions</h2>
                     <div class="auction-filters">
                         <div class="filter-group">
                             <label for="price-filter" class="form-label">Price Range:</label>
@@ -64,18 +64,21 @@
                                 <option value="">All Prices</option>
                                 <option value="0-200">$0 - $200</option>
                                 <option value="200-400">$200 - $400</option>
-                                <option value="400+">$400+</option>
+                                <option value="400-600">$400 - $600</option>
+                                <option value="600-1000">$600 - $1,000</option>
+                                <option value="1000+">$1,000+</option>
                             </select>
                         </div>
                         <div class="filter-group">
                             <label for="medium-filter" class="form-label">Medium:</label>
                             <select id="medium-filter" class="form-control">
                                 <option value="">All Media</option>
-                                <option value="Oil">Oil</option>
-                                <option value="Watercolor">Watercolor</option>
                                 <option value="Acrylic">Acrylic</option>
+                                <option value="Fabric">Fabric</option>
                                 <option value="Mixed Media">Mixed Media</option>
-                                <option value="Ceramic">Ceramic</option>
+                                <option value="AI art">AI Art</option>
+                                <option value="Spray paint">Spray Paint</option>
+                                <option value="Granite">Granite Sculpture</option>
                             </select>
                         </div>
                     </div>
@@ -102,8 +105,8 @@
                 <h2 class="section-title">How to Bid</h2>
                 <div class="how-to-content">
                     <div class="instruction-card">
-                        <h3>1. Browse Artworks</h3>
-                        <p>Explore our curated collection of artwork from talented local artists. Each piece includes detailed information about the artist, medium, and estimated value.</p>
+                        <h3>1. Browse Artist Alley Artworks</h3>
+                        <p>Explore the collection of artwork currently on display in Artist Alley. Each piece includes detailed information about the artist, medium, and estimated value.</p>
                     </div>
                     <div class="instruction-card">
                         <h3>2. Place Your Bid</h3>
@@ -111,7 +114,7 @@
                     </div>
                     <div class="instruction-card">
                         <h3>3. Monitor the Auction</h3>
-                        <p>Keep track of your bids and auction end times. Each auction runs for one month, with live countdown timers showing time remaining.</p>
+                        <p>Keep track of your bids and auction end times. The Artist Alley auction runs from July 16 through August 28, 2025, with live countdown timers showing time remaining.</p>
                     </div>
                     <div class="instruction-card">
                         <h3>4. Payment & Collection</h3>
@@ -124,15 +127,16 @@
         <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">About Kokomo Art Association</h2>
+                <h2 class="section-title">About Artist Alley</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p class="about-mission">Our mission is to bring art to the community by bringing the community to the art.</p>
-                        <p>Founded in 1926, the Kokomo Art Association has been a cornerstone of the local arts community for nearly a century. We are dedicated to fostering artistic expression, education, and appreciation throughout Howard County and beyond.</p>
-                        <p>Our online auction features works from talented local artists who are members of the association. Each piece represents the creativity and skill of our vibrant artistic community.</p>
+                        <p class="about-mission">Artist Alley showcases the vibrant creativity of our local artistic community.</p>
+                        <p>Artist Alley is a special initiative of the Kokomo Art Association, featuring works from talented local artists displayed in a dedicated gallery space. This online auction allows art enthusiasts to bid on the actual pieces currently on display, bringing the gallery experience directly to your home.</p>
+                        <p>Each artwork in this auction represents the creativity and skill of our vibrant artistic community. From traditional paintings to contemporary mixed media and sculpture, Artist Alley celebrates the diverse artistic expressions found in our local area.</p>
+                        <p>The Kokomo Art Association has been fostering artistic expression in Howard County since 1926, and Artist Alley continues this tradition by providing a platform for local artists to share their work with the community.</p>
                     </div>
                     <div class="locations">
-                        <h3>Our Locations</h3>
+                        <h3>Visit Artist Alley</h3>
                         <div class="location-card">
                             <h4>Artworks Gallery</h4>
                             <p>210 N. Main St., Kokomo, IN 46901</p>
@@ -156,7 +160,7 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Get in Touch</h3>
-                        <p>Have questions about our auction or the Kokomo Art Association? We'd love to hear from you.</p>
+                        <p>Have questions about our Artist Alley auction or the Kokomo Art Association? We'd love to hear from you.</p>
                         <div class="contact-details">
                             <div class="contact-item">
                                 <strong>Artworks Gallery</strong>
@@ -170,8 +174,8 @@
                         </div>
                     </div>
                     <div class="auction-info">
-                        <h3>Auction Information</h3>
-                        <p><strong>Duration:</strong> One Month</p>
+                        <h3>Artist Alley Auction Information</h3>
+                        <p><strong>Duration:</strong> July 16 - August 28, 2025</p>
                         <p><strong>Commission:</strong> 30% to KAA, 70% to Artist</p>
                         <p><strong>Member Commission:</strong> 25% to KAA, 75% to Artist</p>
                         <p><strong>Payment Methods:</strong> Credit Card, PayPal, Bank Transfer</p>
