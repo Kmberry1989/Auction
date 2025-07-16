@@ -3,48 +3,13 @@
 /* ==============================
    Data (Artist Alley artworks)
 ============================== */
-const { google } = require('googleapis');
-
-// Function to access the Google Sheets API
-async function accessSpreadsheet() {
-  try {
-    // Read the JSON content from the environment variable
-    const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS;
-
-    if (!credentialsJson) {
-      throw new Error('GOOGLE_APPLICATION_CREDENTIALS environment variable is not set.');
-    }
-
-    // Parse the JSON content
-    const credentials = JSON.parse(credentialsJson);
-
-    // Create a GoogleAuth client using the credentials
-    const auth = new google.auth.GoogleAuth({
-      credentials: credentials,
-      scopes: ['https://www.googleapis.com/auth/spreadsheets']
-    });
-
-    const authClient = await auth.getClient();
-    google.options({auth: authClient});
-
-    const sheets = google.sheets('v4');
-
-    // Now you can use the 'sheets' object to interact with the Google Sheets API
-    // Replace 'YOUR_SPREADSHEET_ID' and 'Sheet1!A1:C10' with your actual values
-    const res = await sheets.spreadsheets.values.get({
-      spreadsheetId: 'KAAAuction',
-      range: 'Sheet1',
-    });
-
-    console.log(res.data.values);
-
-  } catch (error) {
-    console.error('Error accessing Google Sheets:', error);
-  }
-}
-
-// You can call this function when you need to access the spreadsheet
-// accessSpreadsheet();
+// Browser environments do not support Node's `require`, so the Google Sheets
+// integration that relied on the `googleapis` package has been removed. If
+// spreadsheet access is needed in the future, implement it on the server and
+// expose an endpoint the front‑end can call.
+//
+// Bid history is persisted locally using `localStorage` so the page remembers
+// bids between reloads.
 
 const data = {
   artworks: [
@@ -357,6 +322,39 @@ const data = {
 let currentSection = 'home';
 let selectedArtworkId = null;
 let pendingBid = null;
+
+// Persist bid data in localStorage
+function loadBidData() {
+  try {
+    const stored = localStorage.getItem('auctionBids');
+    if (!stored) return;
+    const parsed = JSON.parse(stored);
+    data.artworks.forEach((art) => {
+      const entry = parsed[art.id];
+      if (entry) {
+        art.currentBid = entry.currentBid;
+        art.bidHistory = entry.bidHistory;
+      }
+    });
+  } catch (err) {
+    console.error('Failed to load bids from storage', err);
+  }
+}
+
+function saveBidData() {
+  try {
+    const obj = {};
+    data.artworks.forEach((art) => {
+      obj[art.id] = {
+        currentBid: art.currentBid,
+        bidHistory: art.bidHistory,
+      };
+    });
+    localStorage.setItem('auctionBids', JSON.stringify(obj));
+  } catch (err) {
+    console.error('Failed to save bids to storage', err);
+  }
+}
 
 /* ==============================
    Utilities
@@ -682,6 +680,25 @@ function confirmBid() {
     bidder: 'You',
     time: new Date().toISOString()
   });
+
+  saveBidData();
+
+  // Send the bid to the server
+  try {
+    fetch('/bid', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        artworkId: art.id,
+        amount: pendingBid.amount,
+        bidder: 'You',
+      }),
+    });
+  } catch (err) {
+    console.error('Failed to log bid on server', err);
+  }
   
   closeBidModal();
   
@@ -714,6 +731,9 @@ function updateTimers() {
 ============================== */
 function init() {
   console.log('Initializing app...');
+
+  // Load stored bids
+  loadBidData();
   
   // Setup navigation
   $$('.nav-link').forEach((link) => {

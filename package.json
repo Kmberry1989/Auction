@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "express": "^5.1.0",
     "googleapis": "^153.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
