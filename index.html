@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokomo Art Association - Online Auction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h1 class="brand-title">Kokomo Art Association</h1>
+                    <span class="brand-subtitle">Online Auction</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-section="auctions">Current Auctions</a></li>
+                    <li><a href="#" class="nav-link" data-section="how-to-bid">How to Bid</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">About KAA</a></li>
+                    <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Fine Art Auction</h1>
+                        <p class="hero-subtitle">Discover exceptional artwork from talented local artists</p>
+                        <p class="hero-description">Experience the sophistication of a gallery with the excitement of live bidding. Our monthly auction features carefully curated pieces from members of the Kokomo Art Association.</p>
+                        <button class="btn btn--primary btn--lg" onclick="showSection('auctions')">Browse Current Auctions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Auctions Preview -->
+            <div class="featured-section">
+                <div class="container">
+                    <h2 class="section-title">Featured Auctions</h2>
+                    <div class="featured-grid" id="featured-grid">
+                        <!-- Featured artworks will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auctions Section -->
+        <section id="auctions" class="section">
+            <div class="container">
+                <div class="auctions-header">
+                    <h2 class="section-title">Current Auctions</h2>
+                    <div class="auction-filters">
+                        <div class="filter-group">
+                            <label for="price-filter" class="form-label">Price Range:</label>
+                            <select id="price-filter" class="form-control">
+                                <option value="">All Prices</option>
+                                <option value="0-200">$0 - $200</option>
+                                <option value="200-400">$200 - $400</option>
+                                <option value="400+">$400+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="medium-filter" class="form-label">Medium:</label>
+                            <select id="medium-filter" class="form-control">
+                                <option value="">All Media</option>
+                                <option value="Oil">Oil</option>
+                                <option value="Watercolor">Watercolor</option>
+                                <option value="Acrylic">Acrylic</option>
+                                <option value="Mixed Media">Mixed Media</option>
+                                <option value="Ceramic">Ceramic</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Auction items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Artwork Detail Section -->
+        <section id="artwork-detail" class="section">
+            <div class="container">
+                <button class="btn btn--secondary back-btn" onclick="showSection('auctions')">← Back to Auctions</button>
+                <div class="artwork-detail" id="artwork-detail-content">
+                    <!-- Artwork details will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Bid Section -->
+        <section id="how-to-bid" class="section">
+            <div class="container">
+                <h2 class="section-title">How to Bid</h2>
+                <div class="how-to-content">
+                    <div class="instruction-card">
+                        <h3>1. Browse Artworks</h3>
+                        <p>Explore our curated collection of artwork from talented local artists. Each piece includes detailed information about the artist, medium, and estimated value.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <h3>2. Place Your Bid</h3>
+                        <p>Click on any artwork to view details and place a bid. Bids are placed in increments of $25, $50, or $100 depending on the current bid amount.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <h3>3. Monitor the Auction</h3>
+                        <p>Keep track of your bids and auction end times. Each auction runs for one month, with live countdown timers showing time remaining.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <h3>4. Payment & Collection</h3>
+                        <p>Winners will be notified via email. Payment can be made by credit card, PayPal, or bank transfer. Artwork can be collected at our gallery locations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Kokomo Art Association</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-mission">Our mission is to bring art to the community by bringing the community to the art.</p>
+                        <p>Founded in 1926, the Kokomo Art Association has been a cornerstone of the local arts community for nearly a century. We are dedicated to fostering artistic expression, education, and appreciation throughout Howard County and beyond.</p>
+                        <p>Our online auction features works from talented local artists who are members of the association. Each piece represents the creativity and skill of our vibrant artistic community.</p>
+                    </div>
+                    <div class="locations">
+                        <h3>Our Locations</h3>
+                        <div class="location-card">
+                            <h4>Artworks Gallery</h4>
+                            <p>210 N. Main St., Kokomo, IN 46901</p>
+                            <p>Monday-Friday 12:00-4:00pm<br>Saturday 11:00-3:00pm</p>
+                            <p>Phone: (765) 459-4579</p>
+                        </div>
+                        <div class="location-card">
+                            <h4>Kokomo Art Center</h4>
+                            <p>525 W. Ricketts St., Kokomo, IN 46902</p>
+                            <p>Tuesday-Saturday 1:00-4:00pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions about our auction or the Kokomo Art Association? We'd love to hear from you.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Artworks Gallery</strong>
+                                <p>210 N. Main St., Kokomo, IN 46901</p>
+                                <p>Phone: (765) 459-4579</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Kokomo Art Center</strong>
+                                <p>525 W. Ricketts St., Kokomo, IN 46902</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auction-info">
+                        <h3>Auction Information</h3>
+                        <p><strong>Duration:</strong> One Month</p>
+                        <p><strong>Commission:</strong> 30% to KAA, 70% to Artist</p>
+                        <p><strong>Member Commission:</strong> 25% to KAA, 75% to Artist</p>
+                        <p><strong>Payment Methods:</strong> Credit Card, PayPal, Bank Transfer</p>
+                        <p><strong>Bid Increments:</strong> $25, $50, $100</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bid Confirmation Modal -->
+    <div id="bid-modal" class="modal">
+        <div class="modal-content">
+            <h3>Confirm Your Bid</h3>
+            <p id="bid-confirmation-text"></p>
+            <div class="modal-actions">
+                <button class="btn btn--secondary" onclick="closeBidModal()">Cancel</button>
+                <button class="btn btn--primary" onclick="confirmBid()">Confirm Bid</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
