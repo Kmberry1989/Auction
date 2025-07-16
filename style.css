@@ -1,5 +1,21 @@
 /* Custom styles for the Art Auction Platform */
 
+:root {
+  --color-surface: #f5f5f5;
+  --color-card-border: #e0e0e0;
+  --color-secondary: #fafafa;
+  --color-text-secondary: #666;
+  --color-gallery-frame: #bdbdbd;
+  --radius-lg: 16px;
+  --radius-sm: 8px;
+  --duration-normal: 0.3s;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-artwork: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-artwork-hover: 0 4px 16px rgba(0,0,0,0.12);
+  --space-32: 32px;
+  --space-24: 24px;
+}
+
 /* ... (previous styles) */
 
 /* Artwork cards */
