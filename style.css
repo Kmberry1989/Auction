@@ -655,7 +655,7 @@ select.form-control {
 }
 
 /* END PERPLEXITY DESIGN SYSTEM */
-/* Custom styles for the Art Auction Platform */
+/* Custom styles for the Artist Alley Art Auction Platform */
 
 /* Additional variables for art gallery aesthetic */
 :root {
@@ -874,6 +874,8 @@ select.form-control {
   font-style: italic;
   position: relative;
   overflow: hidden;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
 }
 
 .artwork-image::before {
@@ -947,6 +949,12 @@ select.form-control {
   border: 1px solid rgba(230, 126, 34, 0.2);
 }
 
+.auction-status.ended {
+  background: rgba(100, 100, 100, 0.1);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(100, 100, 100, 0.2);
+}
+
 .time-remaining {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
@@ -972,6 +980,8 @@ select.form-control {
   color: var(--color-text-secondary);
   font-style: italic;
   position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
 }
 
 .artwork-detail-image::before {
@@ -1042,8 +1052,31 @@ select.form-control {
   background: var(--color-secondary-hover);
 }
 
+.bid-increment.active {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-primary);
+}
+
+.artist-bio {
+  background: var(--color-surface);
+  padding: var(--space-20);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.artist-bio h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-12);
+}
+
 .bid-history {
   margin-top: var(--space-24);
+}
+
+.bid-history h3 {
+  color: var(--color-text);
+  margin-bottom: var(--space-16);
 }
 
 .bid-history-item {
@@ -1196,6 +1229,16 @@ select.form-control {
   margin-bottom: var(--space-20);
 }
 
+#selected-increment {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+#place-bid-btn {
+  margin-top: var(--space-12);
+  width: 100%;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .nav-menu {
@@ -1252,6 +1295,10 @@ select.form-control {
   .how-to-content {
     grid-template-columns: 1fr;
   }
+  
+  .bid-controls {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1271,5 +1318,13 @@ select.form-control {
   
   .section {
     padding: var(--space-24) 0;
+  }
+  
+  .brand-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-2xl);
   }
 }
