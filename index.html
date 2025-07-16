@@ -21,6 +21,10 @@
                     <li><a href="#" class="nav-link" data-section="about">About Artist Alley</a></li>
                     <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
                 </ul>
+                <div class="nav-auth">
+                    <button id="signin-button" class="btn btn--secondary" style="display:none" onclick="handleAuthClick()">Sign In</button>
+                    <button id="signout-button" class="btn btn--secondary" style="display:none" onclick="handleSignOutClick()">Sign Out</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -186,5 +190,7 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="https://apis.google.com/js/api.js?onload=gapiLoaded" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" onload="gisLoaded()" async defer></script>
 </body>
 </html>
