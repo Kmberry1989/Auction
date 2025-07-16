@@ -20,7 +20,8 @@ const data = {
       auctionEnd: "2025-08-15T18:00:00",
       bidHistory: [
         { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/alyson-hatcher-kendall.jpeg"
     },
     {
       id: 2,
@@ -37,7 +38,8 @@ const data = {
       auctionEnd: "2025-08-16T18:00:00",
       bidHistory: [
         { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/dajanell-johnson.jpeg"
     },
     {
       id: 3,
@@ -54,7 +56,8 @@ const data = {
       auctionEnd: "2025-08-17T18:00:00",
       bidHistory: [
         { amount: 400, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/deb-edwards.jpeg"
     },
     {
       id: 4,
@@ -71,7 +74,8 @@ const data = {
       auctionEnd: "2025-08-18T18:00:00",
       bidHistory: [
         { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/lana-kirtley.jpeg"
     },
     {
       id: 5,
@@ -88,7 +92,8 @@ const data = {
       auctionEnd: "2025-08-19T18:00:00",
       bidHistory: [
         { amount: 160, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/jaetta-hall.jpeg"
     },
     {
       id: 6,
@@ -105,7 +110,8 @@ const data = {
       auctionEnd: "2025-08-20T18:00:00",
       bidHistory: [
         { amount: 800, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/patrick-redmon.jpeg"
     },
     {
       id: 7,
@@ -122,7 +128,8 @@ const data = {
       auctionEnd: "2025-08-21T18:00:00",
       bidHistory: [
         { amount: 275, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/mia-flowers.jpeg"
     },
     {
       id: 8,
@@ -139,7 +146,8 @@ const data = {
       auctionEnd: "2025-08-22T18:00:00",
       bidHistory: [
         { amount: 715, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/ramona-daniels.jpeg"
     },
     {
       id: 9,
@@ -156,7 +164,8 @@ const data = {
       auctionEnd: "2025-08-23T18:00:00",
       bidHistory: [
         { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/sam-prifogle.jpeg"
     },
     {
       id: 10,
@@ -173,7 +182,8 @@ const data = {
       auctionEnd: "2025-08-24T18:00:00",
       bidHistory: [
         { amount: 600, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/oscar-toloza.jpeg"
     },
     {
       id: 11,
@@ -190,7 +200,8 @@ const data = {
       auctionEnd: "2025-08-25T18:00:00",
       bidHistory: [
         { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/michelle-sutton.jpeg"
     },
     {
       id: 12,
@@ -207,7 +218,8 @@ const data = {
       auctionEnd: "2025-08-26T18:00:00",
       bidHistory: [
         { amount: 200, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/tarja-harney.jpeg"
     },
     {
       id: 13,
@@ -224,7 +236,8 @@ const data = {
       auctionEnd: "2025-08-27T18:00:00",
       bidHistory: [
         { amount: 1000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/rose-bloom.jpeg"
     },
     {
       id: 14,
@@ -241,7 +254,8 @@ const data = {
       auctionEnd: "2025-08-28T18:00:00",
       bidHistory: [
         { amount: 450, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/lesley-wysong.jpeg"
     },
     {
       id: 15,
@@ -258,7 +272,8 @@ const data = {
       auctionEnd: "2025-08-28T18:00:00",
       bidHistory: [
         { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/marcia-blacklidge.jpeg"
     },
     {
       id: 16,
@@ -275,7 +290,8 @@ const data = {
       auctionEnd: "2025-08-28T18:00:00",
       bidHistory: [
         { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ]
+      ],
+      image: "assets/troy-caldwell.jpeg"
     }
   ],
   organization: {
@@ -340,23 +356,23 @@ function timeRemainingString(endTime) {
 ============================== */
 function showSection(sectionId) {
   console.log('Showing section:', sectionId);
-  
+
   // Hide all sections
   $$('.section').forEach(section => {
     section.classList.remove('active');
   });
-  
+
   // Remove active class from all nav links
   $$('.nav-link').forEach(link => {
     link.classList.remove('active');
   });
-  
+
   // Show target section
   const targetSection = $(`#${sectionId}`);
   if (targetSection) {
     targetSection.classList.add('active');
     currentSection = sectionId;
-    
+
     // Update active nav link
     const navLink = $(`.nav-link[data-section="${sectionId}"]`);
     if (navLink) {
@@ -374,7 +390,7 @@ window.showSection = showSection;
 function renderFeatured() {
   const container = $('#featured-grid');
   if (!container) return;
-  
+
   container.innerHTML = '';
   // Select first 3 artworks as featured
   data.artworks.slice(0, 3).forEach((art) => {
@@ -389,7 +405,9 @@ function createArtworkCard(art) {
   card.dataset.id = art.id;
 
   card.innerHTML = `
-      <div class="artwork-image">${art.title}</div>
+      <div class="artwork-image">
+        <img src="${art.image}" alt="${art.title}">
+      </div>
       <div class="artwork-info">
         <h3 class="artwork-title">${art.title}</h3>
         <p class="artwork-artist">by ${art.artist}</p>
@@ -427,7 +445,7 @@ function auctionStatusLabel(art) {
 function renderGallery() {
   const gallery = $('#gallery-grid');
   if (!gallery) return;
-  
+
   gallery.innerHTML = '';
 
   // Apply filters
@@ -479,7 +497,9 @@ function openArtworkDetail(id) {
   if (!container) return;
 
   container.innerHTML = `
-    <div class="artwork-detail-image">${art.title}</div>
+    <div class="artwork-detail-image">
+      <img src="${art.image}" alt="${art.title}">
+    </div>
     <div class="artwork-detail-info">
       <h2>${art.title}</h2>
       <p><em>by ${art.artist} (${art.year})</em></p>
