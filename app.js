@@ -1,151 +1,280 @@
-// app.js - Kokomo Art Association Online Auction
+// app.js - Kokomo Artist Alley Online Art Auction
 
 /* ==============================
-   Data (artworks + organization)
+   Data (Artist Alley artworks)
 ============================== */
 const data = {
   artworks: [
     {
       id: 1,
-      title: "Autumn Reflections",
-      artist: "Sarah McCollum",
-      medium: "Oil on Canvas",
-      dimensions: "24\" x 36\"",
-      year: 2024,
-      startingBid: 150,
-      currentBid: 275,
-      estimatedValue: "400-600",
-      description:
-        "A vibrant autumn landscape capturing the golden light reflecting off a quiet pond. The artist masterfully uses warm oranges and deep reds to create a sense of seasonal transition.",
-      artistBio:
-        "Sarah McCollum is a local Kokomo artist specializing in landscape paintings. She has been a member of the Kokomo Art Association for 8 years and regularly exhibits at the Artworks Gallery.",
+      title: "Highland Covered Bridge",
+      artist: "Alyson Hatcher-Kendall",
+      medium: "Acrylic on marine board",
+      dimensions: "4' x 4'",
+      year: 2025,
+      startingBid: 300,
+      currentBid: 300,
+      estimatedValue: "300-450",
+      description: "A beautiful depiction of Indiana's covered bridge heritage",
+      artistBio: "Alyson Hatcher-Kendall is a talented artist whose work captures the historic charm of Indiana's architectural heritage.",
       auctionEnd: "2025-08-15T18:00:00",
       bidHistory: [
-        { amount: 150, bidder: "Anonymous", time: "2025-07-10T14:30:00" },
-        { amount: 175, bidder: "Anonymous", time: "2025-07-12T09:15:00" },
-        { amount: 200, bidder: "Anonymous", time: "2025-07-14T16:45:00" },
-        { amount: 225, bidder: "Anonymous", time: "2025-07-15T11:20:00" },
-        { amount: 250, bidder: "Anonymous", time: "2025-07-15T19:30:00" },
-        { amount: 275, bidder: "Anonymous", time: "2025-07-16T08:10:00" }
+        { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ]
     },
     {
       id: 2,
-      title: "Urban Harmony",
-      artist: "Michael Chen",
-      medium: "Acrylic on Canvas",
-      dimensions: "20\" x 24\"",
-      year: 2024,
-      startingBid: 100,
-      currentBid: 185,
+      title: "Complex Autumn",
+      artist: "Dajanell Johnson",
+      medium: "Acrylic on marine board",
+      dimensions: "3' x 4'",
+      year: 2025,
+      startingBid: 300,
+      currentBid: 300,
       estimatedValue: "300-450",
-      description:
-        "A contemporary piece exploring the intersection of urban architecture and natural elements. Bold geometric shapes contrast with organic flowing forms.",
-      artistBio:
-        "Michael Chen is a contemporary artist based in Kokomo, known for his abstract interpretations of urban landscapes. He teaches art classes at the Kokomo Art Center.",
-      auctionEnd: "2025-08-20T20:00:00",
+      description: "Vibrant autumn colors captured in layered brushstrokes",
+      artistBio: "Dajanell Johnson creates dynamic works that celebrate the natural beauty of seasonal transitions.",
+      auctionEnd: "2025-08-16T18:00:00",
       bidHistory: [
-        { amount: 100, bidder: "Anonymous", time: "2025-07-08T10:00:00" },
-        { amount: 125, bidder: "Anonymous", time: "2025-07-10T14:20:00" },
-        { amount: 150, bidder: "Anonymous", time: "2025-07-13T16:30:00" },
-        { amount: 175, bidder: "Anonymous", time: "2025-07-15T12:45:00" },
-        { amount: 185, bidder: "Anonymous", time: "2025-07-16T09:15:00" }
+        { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ]
     },
     {
       id: 3,
-      title: "Prairie Wildflowers",
-      artist: "Dixie Ben-net",
-      medium: "Watercolor",
-      dimensions: "16\" x 20\"",
-      year: 2024,
-      startingBid: 125,
-      currentBid: 210,
-      estimatedValue: "350-500",
-      description:
-        "A delicate watercolor celebrating Indiana's native wildflowers. The piece captures the ethereal beauty of prairie blooms with masterful color blending.",
-      artistBio:
-        "Dixie Ben-net is a renowned watercolor artist and longtime member of the Kokomo Art Association. Her work is featured in the permanent collection at the Kokomo Art Center.",
-      auctionEnd: "2025-08-18T19:30:00",
+      title: "Righteous Judgement",
+      artist: "Deb Edwards",
+      medium: "Acrylic on marine board",
+      dimensions: "5'6\" x 3'",
+      year: 2025,
+      startingBid: 400,
+      currentBid: 400,
+      estimatedValue: "400-600",
+      description: "A powerful statement piece exploring themes of justice",
+      artistBio: "Deb Edwards is known for her thought-provoking artwork that addresses social and moral themes.",
+      auctionEnd: "2025-08-17T18:00:00",
       bidHistory: [
-        { amount: 125, bidder: "Anonymous", time: "2025-07-09T11:30:00" },
-        { amount: 150, bidder: "Anonymous", time: "2025-07-11T15:20:00" },
-        { amount: 175, bidder: "Anonymous", time: "2025-07-13T10:45:00" },
-        { amount: 200, bidder: "Anonymous", time: "2025-07-15T17:30:00" },
-        { amount: 210, bidder: "Anonymous", time: "2025-07-16T07:20:00" }
+        { amount: 400, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ]
     },
     {
       id: 4,
-      title: "Highland Park Memories",
-      artist: "Lesley Wysong",
-      medium: "Mixed Media",
-      dimensions: "18\" x 24\"",
-      year: 2024,
-      startingBid: 175,
-      currentBid: 310,
-      estimatedValue: "450-650",
-      description:
-        "A nostalgic mixed media piece featuring Highland Park, home to the Kokomo Art Center. Layers of paint, collage, and drawing create a rich textural experience.",
-      artistBio:
-        "Lesley Wysong serves as the Art Center Curator for the Kokomo Art Association. Her innovative mixed media works explore themes of community and place.",
-      auctionEnd: "2025-08-22T18:30:00",
+      title: "Fairy House",
+      artist: "Lana Kirtley",
+      medium: "Fabric on marine board",
+      dimensions: "4' x 4'",
+      year: 2025,
+      startingBid: 300,
+      currentBid: 300,
+      estimatedValue: "300-450",
+      description: "Whimsical textile art bringing fantasy to life",
+      artistBio: "Lana Kirtley specializes in mixed media textile art that creates magical, otherworldly scenes.",
+      auctionEnd: "2025-08-18T18:00:00",
       bidHistory: [
-        { amount: 175, bidder: "Anonymous", time: "2025-07-07T09:00:00" },
-        { amount: 200, bidder: "Anonymous", time: "2025-07-09T13:45:00" },
-        { amount: 225, bidder: "Anonymous", time: "2025-07-11T16:20:00" },
-        { amount: 250, bidder: "Anonymous", time: "2025-07-13T11:15:00" },
-        { amount: 275, bidder: "Anonymous", time: "2025-07-14T18:40:00" },
-        { amount: 300, bidder: "Anonymous", time: "2025-07-15T14:25:00" },
-        { amount: 310, bidder: "Anonymous", time: "2025-07-16T10:30:00" }
+        { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ]
     },
     {
       id: 5,
-      title: "Ceramic Vessel Series #3",
-      artist: "Robert Martinez",
-      medium: "Glazed Ceramic",
-      dimensions: "12\" x 8\" x 8\"",
-      year: 2024,
-      startingBid: 80,
-      currentBid: 145,
-      estimatedValue: "250-350",
-      description:
-        "A beautifully crafted ceramic vessel featuring earth-tone glazes and organic forms. Part of the artist's exploration of traditional pottery techniques.",
-      artistBio:
-        "Robert Martinez is a ceramic artist who teaches pottery workshops at the Kokomo Art Center. His work draws inspiration from both contemporary and traditional pottery traditions.",
-      auctionEnd: "2025-08-25T17:00:00",
+      title: "Kittyo's Rainbow",
+      artist: "Jaetta Hall",
+      medium: "Acrylic and fabric",
+      dimensions: "72\" x 80\"",
+      year: 2025,
+      startingBid: 160,
+      currentBid: 160,
+      estimatedValue: "160-240",
+      description: "Joyful mixed media piece celebrating color and creativity",
+      artistBio: "Jaetta Hall creates vibrant mixed media works that celebrate joy and the power of color.",
+      auctionEnd: "2025-08-19T18:00:00",
       bidHistory: [
-        { amount: 80, bidder: "Anonymous", time: "2025-07-12T08:30:00" },
-        { amount: 95, bidder: "Anonymous", time: "2025-07-13T14:15:00" },
-        { amount: 110, bidder: "Anonymous", time: "2025-07-14T16:45:00" },
-        { amount: 125, bidder: "Anonymous", time: "2025-07-15T10:20:00" },
-        { amount: 145, bidder: "Anonymous", time: "2025-07-16T11:45:00" }
+        { amount: 160, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ]
     },
     {
       id: 6,
-      title: "Main Street Dusk",
-      artist: "Angela Walthour",
-      medium: "Oil on Canvas",
-      dimensions: "30\" x 40\"",
-      year: 2024,
-      startingBid: 200,
-      currentBid: 385,
-      estimatedValue: "550-800",
-      description:
-        "A stunning cityscape of downtown Kokomo's Main Street at dusk. The warm glow of streetlights creates a romantic atmosphere in this detailed urban scene.",
-      artistBio:
-        "Angela Walthour is a prominent member of the Kokomo Art Association known for her detailed urban landscapes. Her work frequently features recognizable Kokomo landmarks.",
-      auctionEnd: "2025-08-28T19:00:00",
+      title: "AI USA",
+      artist: "Patrick Redmon",
+      medium: "AI art printed on aluminum",
+      dimensions: "4' x 5'",
+      year: 2025,
+      startingBid: 800,
+      currentBid: 800,
+      estimatedValue: "800-1200",
+      description: "Contemporary digital art exploring technology and patriotism",
+      artistBio: "Patrick Redmon is a contemporary artist exploring the intersection of technology and traditional artistic expression.",
+      auctionEnd: "2025-08-20T18:00:00",
       bidHistory: [
-        { amount: 200, bidder: "Anonymous", time: "2025-07-06T12:00:00" },
-        { amount: 225, bidder: "Anonymous", time: "2025-07-08T15:30:00" },
-        { amount: 275, bidder: "Anonymous", time: "2025-07-10T09:45:00" },
-        { amount: 300, bidder: "Anonymous", time: "2025-07-12T17:20:00" },
-        { amount: 325, bidder: "Anonymous", time: "2025-07-14T13:10:00" },
-        { amount: 350, bidder: "Anonymous", time: "2025-07-15T16:35:00" },
-        { amount: 385, bidder: "Anonymous", time: "2025-07-16T09:55:00" }
+        { amount: 800, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 7,
+      title: "Grow & Glow",
+      artist: "Mia Flowers",
+      medium: "Acrylic on marine board",
+      dimensions: "4' x 6'",
+      year: 2025,
+      startingBid: 275,
+      currentBid: 275,
+      estimatedValue: "275-400",
+      description: "Luminous botanical artwork celebrating growth and light",
+      artistBio: "Mia Flowers creates botanical art that captures the luminous quality of plant life and natural growth.",
+      auctionEnd: "2025-08-21T18:00:00",
+      bidHistory: [
+        { amount: 275, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 8,
+      title: "Broken",
+      artist: "Ramona \"Mona\" Daniels",
+      medium: "Acrylic on marine board",
+      dimensions: "2' x 4'",
+      year: 2025,
+      startingBid: 715,
+      currentBid: 715,
+      estimatedValue: "715-1000",
+      description: "Emotionally powerful piece exploring themes of resilience",
+      artistBio: "Ramona \"Mona\" Daniels creates emotionally resonant artwork that explores human resilience and strength.",
+      auctionEnd: "2025-08-22T18:00:00",
+      bidHistory: [
+        { amount: 715, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 9,
+      title: "My Mind's Eye",
+      artist: "Sam Prifogle",
+      medium: "Acrylic on marine board",
+      dimensions: "4' x 5'",
+      year: 2025,
+      startingBid: 500,
+      currentBid: 500,
+      estimatedValue: "500-750",
+      description: "Introspective artwork exploring inner vision and perception",
+      artistBio: "Sam Prifogle creates introspective artwork that invites viewers to explore themes of consciousness and perception.",
+      auctionEnd: "2025-08-23T18:00:00",
+      bidHistory: [
+        { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 10,
+      title: "Flowers for Kokomo",
+      artist: "Oscar Toloza",
+      medium: "Acrylic on marine board",
+      dimensions: "8' x 8'",
+      year: 2025,
+      startingBid: 600,
+      currentBid: 600,
+      estimatedValue: "600-900",
+      description: "Large-scale floral tribute to the Kokomo community",
+      artistBio: "Oscar Toloza creates large-scale works that celebrate community and the beauty of local landmarks.",
+      auctionEnd: "2025-08-24T18:00:00",
+      bidHistory: [
+        { amount: 600, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 11,
+      title: "Radiant Wilds",
+      artist: "Michelle Sutton",
+      medium: "Spray paint (interior/exterior)",
+      dimensions: "8' x 8'",
+      year: 2025,
+      startingBid: 3000,
+      currentBid: 3000,
+      estimatedValue: "3000-4500",
+      description: "Bold spray paint artwork capturing the beauty of wild nature",
+      artistBio: "Michelle Sutton is a contemporary artist who uses spray paint to create bold, dynamic works celebrating natural beauty.",
+      auctionEnd: "2025-08-25T18:00:00",
+      bidHistory: [
+        { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 12,
+      title: "Joan and Magdalena",
+      artist: "Tarja Harney",
+      medium: "Acrylic and spray paint",
+      dimensions: "3' x 3'",
+      year: 2025,
+      startingBid: 200,
+      currentBid: 200,
+      estimatedValue: "200-300",
+      description: "Mixed media portrait celebrating feminine strength",
+      artistBio: "Tarja Harney creates powerful mixed media portraits that celebrate strength and resilience.",
+      auctionEnd: "2025-08-26T18:00:00",
+      bidHistory: [
+        { amount: 200, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 13,
+      title: "Wildflower",
+      artist: "Rose Bloom",
+      medium: "Acrylic on marine board",
+      dimensions: "4' x 6'",
+      year: 2025,
+      startingBid: 1000,
+      currentBid: 1000,
+      estimatedValue: "1000-1500",
+      description: "Delicate botanical study showcasing Indiana's native flora",
+      artistBio: "Rose Bloom specializes in botanical art that captures the delicate beauty of Indiana's native plant life.",
+      auctionEnd: "2025-08-27T18:00:00",
+      bidHistory: [
+        { amount: 1000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 14,
+      title: "Seeds of Hope",
+      artist: "Lesley Wysong",
+      medium: "Acrylic on marine board",
+      dimensions: "4' x 6'8\"",
+      year: 2025,
+      startingBid: 450,
+      currentBid: 450,
+      estimatedValue: "450-675",
+      description: "Symbolic artwork representing growth and optimism",
+      artistBio: "Lesley Wysong serves as the Art Center Curator for the Kokomo Art Association and creates symbolic works exploring themes of hope and growth.",
+      auctionEnd: "2025-08-28T18:00:00",
+      bidHistory: [
+        { amount: 450, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 15,
+      title: "Guardians of the Void",
+      artist: "Marcia Blacklidge",
+      medium: "Mixed media",
+      dimensions: "4' x 6'",
+      year: 2025,
+      startingBid: 500,
+      currentBid: 500,
+      estimatedValue: "500-750",
+      description: "Mysterious mixed media piece exploring cosmic themes",
+      artistBio: "Marcia Blacklidge creates mysterious mixed media works that explore cosmic and metaphysical themes.",
+      auctionEnd: "2025-08-28T18:00:00",
+      bidHistory: [
+        { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
+      ]
+    },
+    {
+      id: 16,
+      title: "Bridge Over Troubled Waters",
+      artist: "Troy Caldwell",
+      medium: "Granite sculpture",
+      dimensions: "60\" x 24\" x 16\"",
+      year: 2025,
+      startingBid: 3000,
+      currentBid: 3000,
+      estimatedValue: "3000-4500",
+      description: "Monumental granite sculpture offering hope and connection",
+      artistBio: "Troy Caldwell is a sculptor who works in granite to create monumental pieces that offer messages of hope and connection.",
+      auctionEnd: "2025-08-28T18:00:00",
+      bidHistory: [
+        { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ]
     }
   ],
@@ -154,7 +283,7 @@ const data = {
     established: 1926,
     mission: "To bring art to the community by bringing the community to the art",
     auctionDetails: {
-      duration: "One Month",
+      duration: "July 16 - August 28, 2025",
       commission: "30% to KAA, 70% to Artist",
       memberCommission: "25% to KAA, 75% to Artist",
       paymentMethods: ["Credit Card", "PayPal", "Bank Transfer"],
@@ -264,7 +393,7 @@ function createArtworkCard(art) {
       <div class="artwork-info">
         <h3 class="artwork-title">${art.title}</h3>
         <p class="artwork-artist">by ${art.artist}</p>
-        <p class="artwork-medium">${art.medium}</p>
+        <p class="artwork-medium">${art.medium} • ${art.dimensions}</p>
         <div class="artwork-bidding">
           <div class="current-bid">
             <span>Current Bid</span>
@@ -315,7 +444,9 @@ function renderGallery() {
       const bid = art.currentBid;
       if (priceVal === '0-200') return bid < 200;
       if (priceVal === '200-400') return bid >= 200 && bid <= 400;
-      if (priceVal === '400+') return bid > 400;
+      if (priceVal === '400-600') return bid >= 400 && bid <= 600;
+      if (priceVal === '600-1000') return bid >= 600 && bid <= 1000;
+      if (priceVal === '1000+') return bid >= 1000;
       return true;
     });
   }
