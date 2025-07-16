@@ -879,6 +879,13 @@ select.form-control {
   font-weight: var(--font-weight-medium);
 }
 
+.artwork-image img,
+.artwork-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .artwork-image::before {
   content: '';
   position: absolute;
