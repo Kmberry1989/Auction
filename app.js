@@ -26,9 +26,7 @@ const data = {
       description: "A beautiful depiction of Indiana's covered bridge heritage",
       artistBio: "Alyson Hatcher-Kendall is a talented artist whose work captures the historic charm of Indiana's architectural heritage.",
       auctionEnd: "2025-08-15T18:00:00",
-      bidHistory: [
-        { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Alyson-Hatcher-Kendall-scaled-e1725475040768-1024x1018.jpg"
     },
     {
@@ -44,9 +42,7 @@ const data = {
       description: "Vibrant autumn colors captured in layered brushstrokes",
       artistBio: "Dajanell Johnson creates dynamic works that celebrate the natural beauty of seasonal transitions.",
       auctionEnd: "2025-08-16T18:00:00",
-      bidHistory: [
-        { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Dajanell-Johnson-747x1024.jpg"
     },
     {
@@ -62,9 +58,7 @@ const data = {
       description: "A powerful statement piece exploring themes of justice",
       artistBio: "Deb Edwards is known for her thought-provoking artwork that addresses social and moral themes.",
       auctionEnd: "2025-08-17T18:00:00",
-      bidHistory: [
-        { amount: 400, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Deb-Edwards-580x1024.jpg"
     },
     {
@@ -80,9 +74,7 @@ const data = {
       description: "Whimsical textile art bringing fantasy to life",
       artistBio: "Lana Kirtley specializes in mixed media textile art that creates magical, otherworldly scenes.",
       auctionEnd: "2025-08-18T18:00:00",
-      bidHistory: [
-        { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Lana-Kirtley-1024x1000.jpg"
     },
     {
@@ -98,9 +90,7 @@ const data = {
       description: "Joyful mixed media piece celebrating color and creativity",
       artistBio: "Jaetta Hall creates vibrant mixed media works that celebrate joy and the power of color.",
       auctionEnd: "2025-08-19T18:00:00",
-      bidHistory: [
-        { amount: 160, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Jaetta-Hall-768x1024.jpg"
     },
     {
@@ -116,9 +106,7 @@ const data = {
       description: "Contemporary digital art exploring technology and patriotism",
       artistBio: "Patrick Redmon is a contemporary artist exploring the intersection of technology and traditional artistic expression.",
       auctionEnd: "2025-08-20T18:00:00",
-      bidHistory: [
-        { amount: 800, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Patrick-Redmon-854x1024.jpg"
     },
     {
@@ -134,9 +122,7 @@ const data = {
       description: "Luminous botanical artwork celebrating growth and light",
       artistBio: "Mia Flowers creates botanical art that captures the luminous quality of plant life and natural growth.",
       auctionEnd: "2025-08-21T18:00:00",
-      bidHistory: [
-        { amount: 275, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Mia-Flowers-743x1024.jpg"
     },
     {
@@ -152,9 +138,7 @@ const data = {
       description: "Emotionally powerful piece exploring themes of resilience",
       artistBio: "Ramona \"Mona\" Daniels creates emotionally resonant artwork that explores human resilience and strength.",
       auctionEnd: "2025-08-22T18:00:00",
-      bidHistory: [
-        { amount: 715, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Ramona-Mona-Daniels-616x1024.jpg"
     },
     {
@@ -170,9 +154,7 @@ const data = {
       description: "Introspective artwork exploring inner vision and perception",
       artistBio: "Sam Prifogle creates introspective artwork that invites viewers to explore themes of consciousness and perception.",
       auctionEnd: "2025-08-23T18:00:00",
-      bidHistory: [
-        { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Sam-Prifogle-832x1024.jpg"
     },
     {
@@ -188,9 +170,7 @@ const data = {
       description: "Large-scale floral tribute to the Kokomo community",
       artistBio: "Oscar Toloza creates large-scale works that celebrate community and the beauty of local landmarks.",
       auctionEnd: "2025-08-24T18:00:00",
-      bidHistory: [
-        { amount: 600, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Oscar-Toloza-930x1024.jpg"
     },
     {
@@ -206,9 +186,7 @@ const data = {
       description: "Bold spray paint artwork capturing the beauty of wild nature",
       artistBio: "Michelle Sutton is a contemporary artist who uses spray paint to create bold, dynamic works celebrating natural beauty.",
       auctionEnd: "2025-08-25T18:00:00",
-      bidHistory: [
-        { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Michelle-Sutton-scaled.jpg"
     },
     {
@@ -224,9 +202,7 @@ const data = {
       description: "Mixed media portrait celebrating feminine strength",
       artistBio: "Tarja Harney creates powerful mixed media portraits that celebrate strength and resilience.",
       auctionEnd: "2025-08-26T18:00:00",
-      bidHistory: [
-        { amount: 200, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Tarja-Harney-1024x928.jpg"
     },
     {
@@ -242,9 +218,7 @@ const data = {
       description: "Delicate botanical study showcasing Indiana's native flora",
       artistBio: "Rose Bloom specializes in botanical art that captures the delicate beauty of Indiana's native plant life.",
       auctionEnd: "2025-08-27T18:00:00",
-      bidHistory: [
-        { amount: 1000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Rose-Bloom-756x1024.jpg"
     },
     {
@@ -260,9 +234,7 @@ const data = {
       description: "Symbolic artwork representing growth and optimism",
       artistBio: "Lesley Wysong serves as the Art Center Curator for the Kokomo Art Association and creates symbolic works exploring themes of hope and growth.",
       auctionEnd: "2025-08-28T18:00:00",
-      bidHistory: [
-        { amount: 450, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Lesley-Wysong-639x1024.jpg"
     },
     {
@@ -278,9 +250,7 @@ const data = {
       description: "Mysterious mixed media piece exploring cosmic themes",
       artistBio: "Marcia Blacklidge creates mysterious mixed media works that explore cosmic and metaphysical themes.",
       auctionEnd: "2025-08-28T18:00:00",
-      bidHistory: [
-        { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Marcia-Blacklidge-702x1024.jpg"
     },
     {
@@ -296,9 +266,7 @@ const data = {
       description: "Monumental granite sculpture offering hope and connection",
       artistBio: "Troy Caldwell is a sculptor who works in granite to create monumental pieces that offer messages of hope and connection.",
       auctionEnd: "2025-08-28T18:00:00",
-      bidHistory: [
-        { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
-      ],
+      bidHistory: [],
       image: "assets/Troy-Caldwell-Scaled-1024x454.jpg"
     }
   ],
@@ -364,6 +332,10 @@ const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(sel
 
 function formatCurrency(num) {
   return `$${num.toLocaleString()}`;
+}
+
+function hasBids(art) {
+  return art.bidHistory && art.bidHistory.length > 0;
 }
 
 function formatDateTime(dateStr) {
@@ -455,7 +427,7 @@ function createArtworkCard(art) {
         <p class="artwork-medium">${art.medium} • ${art.dimensions}</p>
         <div class="artwork-bidding">
           <div class="current-bid">
-            <span>Current Bid</span>
+            <span>${hasBids(art) ? 'Current Bid' : 'Starting Bid'}</span>
             <span class="bid-amount">${formatCurrency(art.currentBid)}</span>
           </div>
           <span class="auction-status ${auctionStatusClass(art)}">${auctionStatusLabel(art)}</span>
@@ -566,7 +538,7 @@ function openArtworkDetail(id) {
 
       <div class="bidding-section">
         <div class="current-bid">
-          <span>Current Bid</span>
+          <span>${hasBids(art) ? 'Current Bid' : 'Starting Bid'}</span>
           <span class="bid-amount" id="detail-current-bid">${formatCurrency(art.currentBid)}</span>
         </div>
         <div class="auction-status ${auctionStatusClass(art)}" id="detail-status">${auctionStatusLabel(art)}</div>
@@ -642,6 +614,9 @@ function generateIncrementButtons(art) {
 }
 
 function renderBidHistory(history) {
+  if (!history || history.length === 0) {
+    return '<p>No bids yet</p>';
+  }
   return history
     .slice()
     .reverse()
