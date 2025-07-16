@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kokomo Artist Alley - Online Art Auction</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -15,11 +16,11 @@
                     <span class="brand-subtitle">Online Art Auction</span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-                    <li><a href="#" class="nav-link" data-section="auctions">Current Auctions</a></li>
-                    <li><a href="#" class="nav-link" data-section="how-to-bid">How to Bid</a></li>
-                    <li><a href="#" class="nav-link" data-section="about">About Artist Alley</a></li>
-                    <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                    <li><a href="#" class="nav-link active" data-section="home"><i class="fa-solid fa-home"></i><span class="sr-only">Home</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="auctions"><i class="fa-solid fa-gavel"></i><span class="sr-only">Current Auctions</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="how-to-bid"><i class="fa-solid fa-question-circle"></i><span class="sr-only">How to Bid</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="about"><i class="fa-solid fa-info-circle"></i><span class="sr-only">About Artist Alley</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="contact"><i class="fa-solid fa-envelope"></i><span class="sr-only">Contact</span></a></li>
                 </ul>
             </div>
         </div>
@@ -36,15 +37,6 @@
                         <button class="btn btn--primary btn--lg" onclick="showSection('auctions')">Browse Current Auctions</button>
                     </div>
                 </div>
-            </div>
-
-            <div class="featured-section">
-                <div class="container">
-                    <h2 class="section-title">Featured Artist Alley Artworks</h2>
-                    <div class="featured-grid" id="featured-grid">
-                        </div>
-                </div>
-            </div>
         </section>
 
         <section id="auctions" class="section">
@@ -178,6 +170,7 @@
         <div class="modal-content">
             <h3>Confirm Your Bid</h3>
             <p id="bid-confirmation-text"></p>
+            <input type="email" id="bidder-email" class="form-control" placeholder="Your email">
             <div class="modal-actions">
                 <button class="btn btn--secondary" onclick="closeBidModal()">Cancel</button>
                 <button class="btn btn--primary" onclick="confirmBid()">Confirm Bid</button>
