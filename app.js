@@ -3,6 +3,49 @@
 /* ==============================
    Data (Artist Alley artworks)
 ============================== */
+const { google } = require('googleapis');
+
+// Function to access the Google Sheets API
+async function accessSpreadsheet() {
+  try {
+    // Read the JSON content from the environment variable
+    const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+
+    if (!credentialsJson) {
+      throw new Error('GOOGLE_APPLICATION_CREDENTIALS environment variable is not set.');
+    }
+
+    // Parse the JSON content
+    const credentials = JSON.parse(credentialsJson);
+
+    // Create a GoogleAuth client using the credentials
+    const auth = new google.auth.GoogleAuth({
+      credentials: credentials,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    });
+
+    const authClient = await auth.getClient();
+    google.options({auth: authClient});
+
+    const sheets = google.sheets('v4');
+
+    // Now you can use the 'sheets' object to interact with the Google Sheets API
+    // Replace 'YOUR_SPREADSHEET_ID' and 'Sheet1!A1:C10' with your actual values
+    const res = await sheets.spreadsheets.values.get({
+      spreadsheetId: 'KAAAuction',
+      range: 'Sheet1',
+    });
+
+    console.log(res.data.values);
+
+  } catch (error) {
+    console.error('Error accessing Google Sheets:', error);
+  }
+}
+
+// You can call this function when you need to access the spreadsheet
+// accessSpreadsheet();
+
 const data = {
   artworks: [
     {
