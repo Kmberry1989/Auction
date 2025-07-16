@@ -21,7 +21,7 @@ const data = {
       bidHistory: [
         { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/alyson-hatcher-kendall.jpeg"
+      image: "assets/Alyson-Hatcher-Kendall-scaled-e1725475040768-1024x1018.jpg"
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const data = {
       bidHistory: [
         { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/dajanell-johnson.jpeg"
+      image: "assets/Dajanell-Johnson-747x1024.jpg"
     },
     {
       id: 3,
@@ -57,7 +57,7 @@ const data = {
       bidHistory: [
         { amount: 400, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/deb-edwards.jpeg"
+      image: "assets/Deb-Edwards-580x1024.jpg"
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ const data = {
       bidHistory: [
         { amount: 300, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/lana-kirtley.jpeg"
+      image: "assets/Lana-Kirtley-1024x1000.jpg"
     },
     {
       id: 5,
@@ -93,7 +93,7 @@ const data = {
       bidHistory: [
         { amount: 160, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/jaetta-hall.jpeg"
+      image: "assets/Jaetta-Hall-768x1024.jpg"
     },
     {
       id: 6,
@@ -111,7 +111,7 @@ const data = {
       bidHistory: [
         { amount: 800, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/patrick-redmon.jpeg"
+      image: "assets/Patrick-Redmon-854x1024.jpg"
     },
     {
       id: 7,
@@ -129,7 +129,7 @@ const data = {
       bidHistory: [
         { amount: 275, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/mia-flowers.jpeg"
+      image: "assets/Mia-Flowers-743x1024.jpg"
     },
     {
       id: 8,
@@ -147,7 +147,7 @@ const data = {
       bidHistory: [
         { amount: 715, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/ramona-daniels.jpeg"
+      image: "assets/Ramona-Mona-Daniels-616x1024.jpg"
     },
     {
       id: 9,
@@ -165,7 +165,7 @@ const data = {
       bidHistory: [
         { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/sam-prifogle.jpeg"
+      image: "assets/Sam-Prifogle-832x1024.jpg"
     },
     {
       id: 10,
@@ -183,7 +183,7 @@ const data = {
       bidHistory: [
         { amount: 600, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/oscar-toloza.jpeg"
+      image: "assets/Oscar-Toloza-930x1024.jpg"
     },
     {
       id: 11,
@@ -201,7 +201,7 @@ const data = {
       bidHistory: [
         { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/michelle-sutton.jpeg"
+      image: "assets/Michelle-Sutton-scaled.jpg"
     },
     {
       id: 12,
@@ -219,7 +219,7 @@ const data = {
       bidHistory: [
         { amount: 200, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/tarja-harney.jpeg"
+      image: "assets/Tarja-Harney-1024x928.jpg"
     },
     {
       id: 13,
@@ -237,7 +237,7 @@ const data = {
       bidHistory: [
         { amount: 1000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/rose-bloom.jpeg"
+      image: "assets/Rose-Bloom-756x1024.jpg"
     },
     {
       id: 14,
@@ -255,7 +255,7 @@ const data = {
       bidHistory: [
         { amount: 450, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/lesley-wysong.jpeg"
+      image: "assets/Lesley-Wysong-639x1024.jpg"
     },
     {
       id: 15,
@@ -273,7 +273,7 @@ const data = {
       bidHistory: [
         { amount: 500, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/marcia-blacklidge.jpeg"
+      image: "assets/Marcia-Blacklidge-702x1024.jpg"
     },
     {
       id: 16,
@@ -291,7 +291,7 @@ const data = {
       bidHistory: [
         { amount: 3000, bidder: "Anonymous", time: "2025-07-16T08:00:00" }
       ],
-      image: "assets/troy-caldwell.jpeg"
+      image: "assets/Troy-Caldwell-Scaled-1024x454.jpg"
     }
   ],
   organization: {
