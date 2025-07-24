@@ -27,7 +27,7 @@ const data = {
       artistBio: "Alyson Hatcher-Kendall is a talented artist whose work captures the historic charm of Indiana's architectural heritage.",
       auctionEnd: "2025-08-15T18:00:00",
       bidHistory: [],
-      image: "assets/Alyson-Hatcher-Kendall-scaled-e1725475040768-1024x1018.jpg"
+      image: "assets/HighlandCoveredBridge.jpg"
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ const data = {
       artistBio: "Dajanell Johnson creates dynamic works that celebrate the natural beauty of seasonal transitions.",
       auctionEnd: "2025-08-16T18:00:00",
       bidHistory: [],
-      image: "assets/Dajanell-Johnson-747x1024.jpg"
+      image: "assets/ComplexAutumn.PNG"
     },
     {
       id: 3,
@@ -59,7 +59,7 @@ const data = {
       artistBio: "Deb Edwards is known for her thought-provoking artwork that addresses social and moral themes.",
       auctionEnd: "2025-08-17T18:00:00",
       bidHistory: [],
-      image: "assets/Deb-Edwards-580x1024.jpg"
+      image: "assets/RighteousJudgement.jpg"
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ const data = {
       artistBio: "Lana Kirtley specializes in mixed media textile art that creates magical, otherworldly scenes.",
       auctionEnd: "2025-08-18T18:00:00",
       bidHistory: [],
-      image: "assets/Lana-Kirtley-1024x1000.jpg"
+      image: "assets/FairyHouse.jpg"
     },
     {
       id: 5,
@@ -91,7 +91,7 @@ const data = {
       artistBio: "Jaetta Hall creates vibrant mixed media works that celebrate joy and the power of color.",
       auctionEnd: "2025-08-19T18:00:00",
       bidHistory: [],
-      image: "assets/Jaetta-Hall-768x1024.jpg"
+      image: "assets/KittyosRainbow.png"
     },
     {
       id: 6,
@@ -107,7 +107,7 @@ const data = {
       artistBio: "Patrick Redmon is a contemporary artist exploring the intersection of technology and traditional artistic expression.",
       auctionEnd: "2025-08-20T18:00:00",
       bidHistory: [],
-      image: "assets/Patrick-Redmon-854x1024.jpg"
+      image: "assets/AiUsa.PNG"
     },
     {
       id: 7,
@@ -123,7 +123,7 @@ const data = {
       artistBio: "Mia Flowers creates botanical art that captures the luminous quality of plant life and natural growth.",
       auctionEnd: "2025-08-21T18:00:00",
       bidHistory: [],
-      image: "assets/Mia-Flowers-743x1024.jpg"
+      image: "assets/GrowandGlow.PNG"
     },
     {
       id: 8,
@@ -139,7 +139,7 @@ const data = {
       artistBio: "Ramona \"Mona\" Daniels creates emotionally resonant artwork that explores human resilience and strength.",
       auctionEnd: "2025-08-22T18:00:00",
       bidHistory: [],
-      image: "assets/Ramona-Mona-Daniels-616x1024.jpg"
+      image: "assets/Broken.PNG"
     },
     {
       id: 9,
@@ -155,7 +155,7 @@ const data = {
       artistBio: "Sam Prifogle creates introspective artwork that invites viewers to explore themes of consciousness and perception.",
       auctionEnd: "2025-08-23T18:00:00",
       bidHistory: [],
-      image: "assets/Sam-Prifogle-832x1024.jpg"
+      image: "assets/MyMindsEye.jpg"
     },
     {
       id: 10,
@@ -171,7 +171,7 @@ const data = {
       artistBio: "Oscar Toloza creates large-scale works that celebrate community and the beauty of local landmarks.",
       auctionEnd: "2025-08-24T18:00:00",
       bidHistory: [],
-      image: "assets/Oscar-Toloza-930x1024.jpg"
+      image: "assets/FlowersforKokomo.jpg"
     },
     {
       id: 11,
@@ -187,7 +187,7 @@ const data = {
       artistBio: "Michelle Sutton is a contemporary artist who uses spray paint to create bold, dynamic works celebrating natural beauty.",
       auctionEnd: "2025-08-25T18:00:00",
       bidHistory: [],
-      image: "assets/Michelle-Sutton-scaled.jpg"
+      image: "assets/RadiantWild.jpg"
     },
     {
       id: 12,
@@ -203,7 +203,7 @@ const data = {
       artistBio: "Tarja Harney creates powerful mixed media portraits that celebrate strength and resilience.",
       auctionEnd: "2025-08-26T18:00:00",
       bidHistory: [],
-      image: "assets/Tarja-Harney-1024x928.jpg"
+      image: "assets/JoanandMagdalena.png"
     },
     {
       id: 13,
@@ -219,7 +219,7 @@ const data = {
       artistBio: "Rose Bloom specializes in botanical art that captures the delicate beauty of Indiana's native plant life.",
       auctionEnd: "2025-08-27T18:00:00",
       bidHistory: [],
-      image: "assets/Rose-Bloom-756x1024.jpg"
+      image: "assets/Wildflower.PNG"
     },
     {
       id: 14,
@@ -235,7 +235,7 @@ const data = {
       artistBio: "Lesley Wysong serves as the Art Center Curator for the Kokomo Art Association and creates symbolic works exploring themes of hope and growth.",
       auctionEnd: "2025-08-28T18:00:00",
       bidHistory: [],
-      image: "assets/Lesley-Wysong-639x1024.jpg"
+      image: "assets/SeedsofHope.png"
     },
     {
       id: 15,
@@ -251,7 +251,7 @@ const data = {
       artistBio: "Marcia Blacklidge creates mysterious mixed media works that explore cosmic and metaphysical themes.",
       auctionEnd: "2025-08-28T18:00:00",
       bidHistory: [],
-      image: "assets/Marcia-Blacklidge-702x1024.jpg"
+      image: "assets/GuardiansoftheVoid.jpg"
     },
     {
       id: 16,
@@ -267,7 +267,7 @@ const data = {
       artistBio: "Troy Caldwell is a sculptor who works in granite to create monumental pieces that offer messages of hope and connection.",
       auctionEnd: "2025-08-28T18:00:00",
       bidHistory: [],
-      image: "assets/Troy-Caldwell-Scaled-1024x454.jpg"
+      image: "assets/BridgeOverTroubledWater1.jpg"
     }
   ],
   organization: {
